@@ -1,12 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { View } from "react-native";
 import MapApp from './src/MapApp';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <MapApp />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import { styles } from './styles';
+
+export default function App() {
+  return (
+    <View style={styles.parentContainer}>
+      <MapApp />
+    </View>
+  );
+}
 
 
