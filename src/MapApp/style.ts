@@ -62,5 +62,12 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
-  }
+  },
+  mapContainer: {
+    height: '100%',
+    width: '100%',
+    borderWidth: 2,
+    borderColor: '#000',
+    borderRadius: 8,
+  },
 });
