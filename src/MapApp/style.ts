@@ -55,6 +55,7 @@ export const styles = StyleSheet.create({
     alignSelf: 'center',
     marginTop: 8,
     elevation: 2,
+    marginRight: 8
   },
   buttonText: {
     color: '#fff',

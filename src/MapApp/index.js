@@ -21,6 +21,20 @@ export default function MapApp() {
     }
   }
 
+  const getCurrentLocation = () => {
+    if ('geolocation' in navigator) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const { latitude, longitude } = position.coords;
+            setLocation({ lat: latitude, lon: longitude });
+          },
+          (error) => {
+            console.error('Error getting location:', error.message);
+          }
+        );
+    }
+  }
+
   return (
     <div style={{ ...styles.container, height: '100vh', display: 'flex' }}>
       <div style={styles.formColumn}>
@@ -35,6 +49,7 @@ export default function MapApp() {
             />
           </label>
           <button type="submit" style={styles.button}>Buscar Local</button>
+          <button type='button' onClick={getCurrentLocation}>Usar Localização Atual</button> 
         </form>
       </div>
       <div style={styles.mapColumn}>
